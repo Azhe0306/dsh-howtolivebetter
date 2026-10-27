@@ -1,0 +1,69 @@
+{
+  "name": "dsh-howtolivebetter",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness plugin: read the HowToLiveBetter guide (34 chapters, 767 evidence-graded suggestions) inside a sidebar panel — browse by chapter, full-text search, filter by evidence grade, payoff size, cost-effectiveness, payoff type and audience.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "icon": "./icon.svg",
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale",
+    "data",
+    "tools",
+    "screenshots.json",
+    "assets",
+    "README.md",
+    "NOTICE",
+    "LICENSE",
+    "LICENSE-CC-BY-4.0",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "howtolivebetter",
+    "life-guide",
+    "life-advice",
+    "decision-making"
+  ],
+  "license": "(MIT AND CC-BY-4.0)",
+  "author": "MonkeyGarry",
+  "homepage": "https://github.com/Azhe0306/dsh-howtolivebetter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azhe0306/dsh-howtolivebetter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Azhe0306/dsh-howtolivebetter/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node tools/smoke-test.mjs",
+    "build:data": "node tools/build-data.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  }
+}
