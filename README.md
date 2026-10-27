@@ -25,6 +25,12 @@ git clone https://github.com/Azhe0306/dsh-howtolivebetter.git
 dsh plugin --profile desktop add ./dsh-howtolivebetter
 ```
 
+**4. 离线预构建包**：[Releases](https://github.com/Azhe0306/dsh-howtolivebetter/releases) 里每个版本都带一个预构建包，资产名固定为 `dsh-howtolivebetter.tgz`（名字不带版本号，链接不会随发版腐烂）。市场条目正是用它做「预构建安装」，不需要构建授权、不联网拉依赖：
+
+```bash
+dsh plugin --profile desktop add file:./dsh-howtolivebetter.tgz
+```
+
 装完**重启一次 DSH**（客户端模块有缓存，热更不一定会重新拉页面模块）。之后侧栏出现「人生指南」图标。
 
 ## 界面
